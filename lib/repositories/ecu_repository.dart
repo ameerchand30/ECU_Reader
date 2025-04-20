@@ -1,15 +1,14 @@
 import 'dart:async';
 import 'package:injectable/injectable.dart';
-import '../domain/ecu_error.dart';
-import '../../core/bluetooth/bluetooth_service.dart';
+import '../models/ecu_error.dart';
+import '../services/obd_bluetooth_service.dart';
 
 @injectable
 class ECURepository {
-  final BluetoothService _bluetoothService;
+  final ObdBluetoothService _bluetoothService;
   
   ECURepository(this._bluetoothService);
 
-  // Command codes
   static const List<int> READ_ERRORS_COMMAND = [0x03, 0x03];
   static const List<int> CLEAR_ERRORS_COMMAND = [0x04, 0x04];
 
@@ -25,7 +24,7 @@ class ECURepository {
   Future<bool> clearErrors() async {
     try {
       final response = await _bluetoothService.sendCommand(CLEAR_ERRORS_COMMAND);
-      return response[0] == 0x44; // Success response code
+      return response[0] == 0x44;
     } catch (e) {
       throw Exception('Failed to clear ECU errors: $e');
     }

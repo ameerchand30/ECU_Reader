@@ -1,7 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import '../../data/ecu_repository.dart';
-import '../../domain/ecu_error.dart';
+import 'package:injectable/injectable.dart';
+import '../repositories/ecu_repository.dart';
+import '../models/ecu_error.dart';
 
 part 'ecu_event.dart';
 part 'ecu_state.dart';

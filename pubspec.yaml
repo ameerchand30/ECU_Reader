@@ -61,7 +61,7 @@ dependencies:
 
   # Code generation and annotations
   freezed_annotation: ^2.4.1
-  json_annotation: ^4.8.1
+  json_annotation: ^4.9.0
    # Storage and platform
   shared_preferences: ^2.2.2
   path_provider: ^2.1.2
@@ -83,6 +83,9 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
+  build_runner: ^2.4.8 # For running the code generators
+  freezed: ^2.4.1 # The code generator for freezed
+  json_serializable: ^6.9.1 # The code generator for JSON serialization
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

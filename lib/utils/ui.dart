@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../bloc/ecu_bloc.dart';
-import '../../domain/ecu_error.dart';
+import '../models/ecu_error.dart';
 
 class ECUPage extends StatelessWidget {
   @override
