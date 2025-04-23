@@ -5,6 +5,7 @@ import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 
 import 'services/obd_bluetooth_service.dart';
+import 'services/elm327_service.dart';
 import 'repositories/ecu_repository.dart';
 import 'bloc/ecu_bloc.dart';
 import 'utils/ui.dart';
@@ -15,6 +16,7 @@ final getIt = GetIt.instance;
 void configureDependencies() {
   // Register services
   getIt.registerLazySingleton<ObdBluetoothService>(() => ObdBluetoothService());
+  getIt.registerLazySingleton<ELM327Service>(() => ELM327Service());
   
   // Register repositories
   getIt.registerLazySingleton<ECURepository>(

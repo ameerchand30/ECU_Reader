@@ -66,6 +66,8 @@ dependencies:
   shared_preferences: ^2.2.2
   path_provider: ^2.1.2
 
+  toastification: 3.0.2 # For showing toast messages
+
 
   
 
